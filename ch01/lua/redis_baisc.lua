@@ -1,3 +1,6 @@
+-- docker run -p 6379:6379 --name redis-d1 -d redis
+
+
 local redis = require("resty.redis")
 
 local function close_redis(red)

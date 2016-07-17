@@ -1,3 +1,5 @@
+--docker run -p 3306:3306 --name mysql-d1 -e MYSQL_ROOT_PASSWORD=root -d mysql
+
 local function close_db(db)
     if not db then
         return
@@ -10,6 +12,7 @@ local mysql = require("resty.mysql")
 
 --创建实例
 local db, err = mysql:new()
+
 if not db then
     ngx.say("new mysql error : ", err)
     return
